@@ -1,0 +1,8 @@
+# Ignore entire directories or specific files
+node_modules/
+dist/
+chart.tsx
+db.ts
+next-auth.d.ts
+placeholders-and-vanish-input.tsx
+sw.js
