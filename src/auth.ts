@@ -1,8 +1,8 @@
 import NextAuth from "next-auth";
-import authConfig from "@/auth.config";
+import authConfig from "./auth.config";
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import { db } from "@/lib/db";
-import { getUserById } from "@/serverAction/data/user";
+import { db } from "./lib/db";
+import { getUserById } from "./serverAction/data/user";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   callbacks: {
@@ -29,6 +29,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     async session({ session, token }) {
       if (session.user) {
         const user = await getUserById(token.sub as string);
+        session.user.id = user?.id as string;
         session.user.hasPhoneVerified = user?.hasPhoneVerified || false;
       }
       return session;

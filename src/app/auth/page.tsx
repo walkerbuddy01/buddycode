@@ -1,7 +1,7 @@
 "use client";
 
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { Button } from "@/components/ui/button";
+import MaxWidthWrapper from "../../components/MaxWidthWrapper";
+import { Button } from "../../components/ui/button";
 import { Lock } from "lucide-react";
 import { signIn } from "next-auth/react";
 import { useState } from "react";

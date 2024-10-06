@@ -33,8 +33,8 @@ export const navItems: navItems = [
     options: false,
   },
   {
-    name: "Intership Programs",
-    href: "/intership-programs",
+    name: "Internship Programs",
+    href: "/internship-programs",
     icon: SquareTerminal,
     options: false,
   },
@@ -51,6 +51,36 @@ export const navItems: navItems = [
     options: false,
   },
 ];
+
+// --------------------------------------------------------------------
+// Images Links
+
+export const techImagesLinks = {
+  html: "https://ik.imagekit.io/bc/TechImages/html.png?updatedAt=1727111393899",
+  css: "https://ik.imagekit.io/bc/TechImages/css.png?updatedAt=1727111393899",
+  js: "https://ik.imagekit.io/bc/TechImages/JS.png?updatedAt=1727111393899",
+  react:
+    "https://ik.imagekit.io/bc/TechImages/ReactJS.png?updatedAt=1727111393899",
+  node: "https://ik.imagekit.io/bc/TechImages/nodejs.png?updatedAt=1727111393899",
+  mongo:
+    "https://ik.imagekit.io/bc/TechImages/mongo-db.png?updatedAt=1727111393899",
+  tailwind:
+    "https://ik.imagekit.io/bc/TechImages/Tailwind.png?updatedAt=1727111393899",
+  github:
+    "https://ik.imagekit.io/bc/TechImages/github.png?updatedAt=1727111393899",
+  flutter:
+    "https://ik.imagekit.io/bc/TechImages/flutter.png?updatedAt=1726921352697",
+  git: "https://ik.imagekit.io/bc/TechImages/git.png?updatedAt=1727111393899",
+  wordpress:
+    "https://ik.imagekit.io/bc/TechImages/wordpress.png?updatedAt=1727111393899",
+  typescript:
+    "https://ik.imagekit.io/bc/TechImages/typescript.png?updatedAt=1727111393899",
+  vscode:
+    "https://ik.imagekit.io/bc/TechImages/visual-studio-code.png?updatedAt=1727111393899",
+  npm: "https://ik.imagekit.io/bc/TechImages/npm.png?updatedAt=1727111393899",
+  mysql:
+    "https://ik.imagekit.io/bc/TechImages/mysql.png?updatedAt=1727868957550",
+};
 
 export const services = [
   {
@@ -113,6 +143,8 @@ export const detailedServices = [
     ],
     minPrice: 14999,
     maxPrice: 39999,
+    serviceId: "bd",
+    logos: [techImagesLinks.node, techImagesLinks.mongo, techImagesLinks.mysql],
   },
   {
     name: "Web Development",
@@ -123,6 +155,7 @@ export const detailedServices = [
     imageAlt: "Web Development",
     minPrice: 14999,
     maxPrice: 39999,
+    serviceId: "wd",
     Provides: [
       "HTML",
       "CSS",
@@ -135,6 +168,7 @@ export const detailedServices = [
       "Bootstrap",
       "ShadCN",
       "Lenis",
+      "GSAP",
     ],
   },
 
@@ -148,6 +182,7 @@ export const detailedServices = [
     Provides: ["ReactNative", "Flutter", "FlutterFlow"],
     minPrice: 19999,
     maxPrice: 39999,
+    serviceId: "ad",
   },
   {
     name: "Content Writing",
@@ -164,6 +199,7 @@ export const detailedServices = [
     ],
     minPrice: 0.9,
     maxPrice: 3.9,
+    serviceId: "cw",
   },
   {
     name: "Graphic Designing",
@@ -175,6 +211,7 @@ export const detailedServices = [
     Provides: ["UI/UX", "Logo-Designing", "Branding", "Illustration"],
     minPrice: 999,
     maxPrice: 19999,
+    serviceId: "gd",
   },
   {
     name: "Wordpress Development",
@@ -186,6 +223,7 @@ export const detailedServices = [
     imageAlt: "Wordpress web development",
     minPrice: 5999,
     maxPrice: 39999,
+    serviceId: "wp",
   },
 ];
 
@@ -195,21 +233,21 @@ export const perks = [
     Icon: SquareCode,
     IconColor: "cyan",
     Description:
-      "Our intership programs teach the latest industry-leading technologies, ensuring you're equipped with the skills that are in demand in today's tech landscape.",
+      "Our internship programs teach the latest industry-leading technologies, ensuring you're equipped with the skills that are in demand in today's tech landscape.",
   },
   {
     Name: "Afforable Price",
     Icon: Wallet,
     IconColor: "green",
     Description:
-      "Our intership programs provide outstanding quality at a great price, giving you exceptional value and top-notch education without stretching your budget.",
+      "Our internship programs provide outstanding quality at a great price, giving you exceptional value and top-notch education without stretching your budget.",
   },
   {
     Name: "Job Assistant",
     Icon: Handshake,
     IconColor: "blue",
     Description:
-      "Along with our high-quality intership programs, we offer dedicated job assistance to help you secure your ideal position and advance your career.",
+      "Along with our high-quality internship programs, we offer dedicated job assistance to help you secure your ideal position and advance your career.",
   },
 ];
 
@@ -303,50 +341,54 @@ interface Internship {
   courseLevel: courseLevels;
   coursePurpose: coursePurposes;
   upcoming: boolean;
-  intershipNo: string;
+  internshipNo: string;
 }
 
-export const intershipDetails: Internship[] = [
+export const internshipDetails: Internship[] = [
   {
     name: "Conquer-Frontend : Create what you think",
     description: `Conquer the web building game with Conquer-Frontend. Nail HTML, CSS, JS and Solve the real world problems which helps to build logic and design. Dive into the fun and industry projects and be interview ready.`,
-    href: "/intership-programs/cf",
+    href: "/internship-programs/cf",
     price: 19999,
     droppedPrice: 14999,
     discountAllowed: () => {
       const originalPrice = 19999;
       const discountedPrice = 14999;
-      return Math.round(((originalPrice - discountedPrice) / originalPrice) * 100);
+      return Math.round(
+        ((originalPrice - discountedPrice) / originalPrice) * 100
+      );
     },
-    tags: ["Web Development", "Frontend", "ReactJS"],
-    benefits: ["3-Months", "Bounties", "EMI","Job Assistants*"],
+    tags: ["Web Development", "Frontend", "ReactJS", "GSAP", "Lenis"],
+    benefits: ["3-Months", "Bounties", "EMI", "Job Assistants*"],
     imageSrc: "https://ik.imagekit.io/bc/Images/cf.jpg?updatedAt=1727111262213",
     imageAlt: "Conquer-Frontend",
     courseLevel: courseLevels["Beginner"],
     coursePurpose: coursePurposes["Indepth"],
     upcoming: false,
-    intershipNo: "cf",
+    internshipNo: "cf",
   },
   {
     name: "Conquer-Backend: Build the future",
     description: `Conquer the web building game with Conquer-Backend. Nail the backend technologies and solve the real world problems. Dive into the fun and industry projects and be interview ready.`,
-    href: "/intership-programs/cb",
+    href: "/internship-programs/cb",
     price: 19999,
     droppedPrice: 14999,
     discountAllowed: () => {
       const originalPrice = 19999;
       const discountedPrice = 14999;
-      return Math.round(((originalPrice - discountedPrice) / originalPrice) * 100);
+      return Math.round(
+        ((originalPrice - discountedPrice) / originalPrice) * 100
+      );
     },
     tags: ["Mongoose", "MongoDB", "NoSQL", "Backend", "NodeJS"],
-    benefits: ["3-Months", "Bounties", "EMI","Job Assistants*" ],
+    benefits: ["3-Months", "Bounties", "EMI", "Job Assistants*"],
     imageSrc:
       "https://ik.imagekit.io/bc/Images/Frame%203%20(1).jpg?updatedAt=1727167210312",
     imageAlt: "Conquer-Backend",
     courseLevel: courseLevels["Beginner"],
     coursePurpose: coursePurposes["Indepth"],
     upcoming: true,
-    intershipNo: "cb",
+    internshipNo: "cb",
   },
 ];
 
@@ -354,7 +396,7 @@ export const intershipDetails: Internship[] = [
 
 export const cfSyllabus = [
   {
-    label: "Intership Program - Walkthrough",
+    label: "Internship Program - Walkthrough",
     topics: [
       "Orientation - Analysis the journey",
       "Warmup -  Essential concepts",
@@ -377,46 +419,55 @@ export const cfSyllabus = [
     ],
   },
   {
+    label: "Git & Github",
+    topics: ["Git & Github - Deep Dive", "Git & Github - Advanced Concepts"],
+  },
+  {
     label: "JavaScript - Everything you need to know",
     topics: [
-      "JavaScript - Foundational Concepts ",
-      "JavaScript - Pro Level Concepts",
+      "JavaScript - Needs to start ",
+      "JavaScript - Advanced Stuff which is must know",
+      "JS - Asynchronous Programming",
+      "JavaScript - DOM adding life to web",
+      "JS - Working of Events,Everthing need to know about Event",
+      "JS - Interview Questions",
+    ],
+  },
+  {
+    label: "NodeJS & NPM",
+    topics: [
+      "NodeJS + NPM - Essentials",
+      "NodeJS - Basic Architecture & Concepts",
+      "Express - Building a Basic Server",
+    ],
+  },
+  {
+    label: "Logic Building",
+    topics: [
+      "Logic Building - How to think?",
+      "Logic Building - Real World Problems",
+      "Logic Building - How to improve?",
+    ],
+  },
+  {
+    label: "GSAP and Lenis - Fun with animations",
+    topics: [
+      "GSAP - Master the Animation with GreenSock ",
+      "Lenis - Sliky smooth scroll",
+      "GSAP and Lenis - Project Time",
     ],
   },
   {
     label: "ReactJS ",
-    topics: ["ReactJS - Deep Dive", "ReactJS - Advanced Concepts"],
+    topics: [
+      "ReactJS - React History & Concepts",
+      "ReactJS - All Essential Concepts",
+      "ReactJS - Advance Stuff with Projects",
+      "ReactJS - Clone Project (On demand) with Industry Standards Coding Practices",
+    ],
   },
   {
-    label: "Git & Github",
-    topics: ["Git & Github - Deep Dive", "Git & Github - Advanced Concepts"],
+    label: "Mega Project ",
+    topics: ["Lets Build from Scratch"],
   },
 ];
-
-// --------------------------------------------------------------------
-// Images Links
-
-export const techImagesLinks = {
-  html: "https://ik.imagekit.io/bc/TechImages/html.png?updatedAt=1727111393899",
-  css: "https://ik.imagekit.io/bc/TechImages/css.png?updatedAt=1727111393899",
-  js: "https://ik.imagekit.io/bc/TechImages/JS.png?updatedAt=1727111393899",
-  react:
-    "https://ik.imagekit.io/bc/TechImages/ReactJS.png?updatedAt=1727111393899",
-  node: "https://ik.imagekit.io/bc/TechImages/nodejs.png?updatedAt=1727111393899",
-  mongo:
-    "https://ik.imagekit.io/bc/TechImages/mongo-db.png?updatedAt=1727111393899",
-  tailwind:
-    "https://ik.imagekit.io/bc/TechImages/Tailwind.png?updatedAt=1727111393899",
-  github:
-    "https://ik.imagekit.io/bc/TechImages/github.png?updatedAt=1727111393899",
-  flutter:
-    "https://ik.imagekit.io/bc/TechImages/flutter.png?updatedAt=1726921352697",
-  git: "https://ik.imagekit.io/bc/TechImages/git.png?updatedAt=1727111393899",
-  wordpress:
-    "https://ik.imagekit.io/bc/TechImages/wordpress.png?updatedAt=1727111393899",
-  typescript:
-    "https://ik.imagekit.io/bc/TechImages/typescript.png?updatedAt=1727111393899",
-  vscode:
-    "https://ik.imagekit.io/bc/TechImages/visual-studio-code.png?updatedAt=1727111393899",
-  npm: "https://ik.imagekit.io/bc/TechImages/npm.png?updatedAt=1727111393899",
-};

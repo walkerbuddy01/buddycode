@@ -7,15 +7,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger
-} from "@/components/ui/dialog";
+} from "./ui/dialog";
 import confetti from "canvas-confetti";
 import { useState, useTransition } from "react";
 import { Button } from "./ui/button";
 
-import { useCurrentUser } from "@/hooks/useCurrentUser";
-import { cn } from "@/lib/utils";
-import { setPhoneNumber } from "@/serverAction/data/userDetails";
-import { UserPhoneNumberSchema } from "@/zodValidation/UserDetailsSchemas";
+import { useCurrentUser } from "../hooks/useCurrentUser";
+import { cn } from "../lib/utils";
+import { setPhoneNumber } from "../serverAction/data/userDetails";
+import { UserPhoneNumberSchema } from "../zodValidation/UserDetailsSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   CircleCheckBig,
@@ -95,7 +95,7 @@ export default function PhoneChecker() {
               <Button
                 className="w-full"
                 onClick={() => {
-                  router.push("/intership-programs");
+                  router.push("/internship-programs");
                   setIsDialogOpen(false);
                 }}
               >

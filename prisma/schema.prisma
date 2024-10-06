@@ -9,6 +9,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum Course {
+  FRONTEND_DEVELOPMENT
+  BACKEND_DEVELOPMENT
+  FULLSTACK_DEVELOPMENT
+}
+
+enum PaymentType {
+  COMPLETED
+  PARTIAL
+}
+
 model User {
   id               String    @id @default(cuid())
   name             String? // User's name from OAuth provider
@@ -41,4 +52,34 @@ model Account {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@id([provider, providerAccountId])
+}
+
+model Reciept {
+  id         String       @id @default(cuid())
+  userId     String
+  course     Course
+  price      Int
+  paymentId  String[]
+  userCourse UserCourse[]
+  createdAt  DateTime     @default(now())
+  updatedAt  DateTime     @updatedAt
+
+  @@unique([userId, id])
+}
+
+model UserCourse {
+  id          String      @id @default(cuid())
+  userId      String
+  course      Course
+  price       Int
+  paymentType PaymentType
+  paymentLeft Int
+  internshipNo String
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  recieptId   String?
+  reciept     Reciept?    @relation(fields: [recieptId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, internshipNo])
+  @@index([userId, internshipNo])
 }

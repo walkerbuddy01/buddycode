@@ -1,23 +1,24 @@
-import { ComparisonChart } from "@/components/charts/ComparisonChart";
-import CompanyGrowthStats from "@/components/CompanyGrowthStats";
-import IntershipPrograms from "@/components/IntershipPrograms";
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import NavFooter from "@/components/NavFooter";
-import Perks from "@/components/Perks";
-import SlideUpText from "@/components/SlideInText";
-import { Button } from "@/components/ui/button";
+import { ComparisonChart } from "../components/charts/ComparisonChart";
+import CompanyGrowthStats from "../components/CompanyGrowthStats";
+import InternshipPrograms from "../components/InternshipPrograms";
+import MaxWidthWrapper from "../components/MaxWidthWrapper";
+import Navbar from "../components/Navbar";
+import NavFooter from "../components/NavFooter";
+import Perks from "../components/Perks";
+import SlideUpText from "../components/SlideInText";
+import { Button } from "../components/ui/button";
 import Link from "next/link";
-
-export default  function Home() {
+export default function Home() {
   return (
-    <>
+    <section className="w-full h-full main-bg">
+      <Navbar />
       <MaxWidthWrapper className="overflow-hidden">
         <div className="flex flex-col items-center sm:p-11 w-full select-none ">
           <div className="flex justify-end w-full">
             <p className="text-xs font-gilroyMedium w-[180px] lg:block hidden md:mb-8 mb-0">
               Fast-track your{" "}
               <span className="text-[#FF6B35]">
-                career with tailored intership programs
+                career with tailored internship programs
               </span>
               , equipping you to make a lasting impact in the tech industry and
               achieve
@@ -30,13 +31,13 @@ export default  function Home() {
               <span className="text-[#FF6B35] text-shadow-orange">
                 State Of the Art
               </span>{" "}
-              Intership Programs Using the Latest Industry{" "}
+              Internship Programs Using the Latest Industry{" "}
               <span className="text-[#FF6B35] text-shadow-orange"> Tech.</span>
             </p>
           </p>
           <div className=" w-full flex justify-center items-center sm:pr-6 mt-8">
             <div className="flex justify-center sm:mt-32  lg:mt-10 mt-0 py-2">
-              <Link href={"/intership-programs"}>
+              <Link href={"/internship-programs"}>
                 <Button
                   size={"lg"}
                   className="sm:text-[22px] text-[20px] py-6 px-12 font-helveticaNowDisplayMedium"
@@ -88,14 +89,14 @@ export default  function Home() {
               Check Out Our
               <span className="text-[#FF6B35] text-shadow-orange font-helveticaNowDisplayBold sm:tracking-wide">
                 {" "}
-                Intership Programs
+                Internship Programs
               </span>
             </p>
-            <IntershipPrograms />
+            <InternshipPrograms />
           </MaxWidthWrapper>
         </section>
         <NavFooter />
       </MaxWidthWrapper>
-    </>
+    </section>
   );
 }

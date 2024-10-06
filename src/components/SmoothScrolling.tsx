@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 import Lenis from "lenis";
 import React, { useEffect } from "react";
 
@@ -29,7 +29,11 @@ function SmoothScrolling({
       lenis.destroy();
     };
   }, []);
-  return <div className={cn("hide-scrollbar", className)}>{children}</div>;
+  return (
+    <div className={cn("hide-scrollbar md:show-scrollbar", className)}>
+      {children}
+    </div>
+  );
 }
 
 export default SmoothScrolling;

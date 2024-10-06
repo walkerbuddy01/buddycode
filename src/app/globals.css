@@ -21,8 +21,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-main {
+.main-bg {
   background-image: url('https://ik.imagekit.io/bc/Images/Frame%202%20(4).svg?updatedAt=1727151792266');
+  background-size: cover;
+  background-position: top;
+  margin: 0;
+  padding: 0;
+}
+
+.bd-bg {
+  background-image: url('https://ik.imagekit.io/bc/Images/bg-2.png?updatedAt=1727870345699');
   background-size: cover;
   background-position: top;
   margin: 0;
@@ -36,6 +44,21 @@ body::-webkit-scrollbar {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.show-scrollbar::-webkit-scrollbar {
+  width: 12px;
+  /* Set the width of the scrollbar */
+  height: 7px;
+  /* Set the height of the scrollbar for horizontal scroll */
+}
+
+/* Optional: style the scrollbar */
+.show-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background-color: rgba(183, 181, 181, 0.516);
+  /* Style for scrollbar thumb */
+}
+
 
 
 

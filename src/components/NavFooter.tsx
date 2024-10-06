@@ -1,4 +1,4 @@
-import { contactDetails, navFooterItems, socials } from "@/lib/constant";
+import { contactDetails, navFooterItems, socials } from "../lib/constant";
 import Link from "next/link";
 
 function NavFooter() {

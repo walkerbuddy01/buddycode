@@ -5,9 +5,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "./ui/dropdown-menu";
 import { Badge } from "./ui/badge";
-import { services } from "@/lib/constant";
+import { services } from "../lib/constant";
 import { PackageOpen } from "lucide-react";
 import Link from "next/link";
 

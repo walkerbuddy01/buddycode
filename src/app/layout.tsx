@@ -1,8 +1,7 @@
-import Navbar from "@/components/Navbar";
-import ClientSplash from "@/components/SplashScreenProvider";
-import { ThemeProvider } from "@/components/theme-provider";
-import { ReactLenis } from "@/lib/lenis";
-import { cn } from "@/lib/utils";
+import ClientSplash from "../components/SplashScreenProvider";
+import { ThemeProvider } from "../components/theme-provider";
+import { ReactLenis } from "../lib/lenis";
+import { cn } from "../lib/utils";
 import type { Metadata, Viewport } from "next";
 import {
   gilroyMedium,
@@ -16,9 +15,9 @@ import {
   neuMachinaRegular,
 } from "./fonts/fonts";
 import "./globals.css";
-import PhoneChecker from "@/components/PhoneChecker";
+import PhoneChecker from "../components/PhoneChecker";
 import { SessionProvider } from "next-auth/react";
-import { auth } from "@/auth";
+import { auth } from "../auth";
 
 export const metadata: Metadata = {
   title: "BuddyCode",
@@ -37,7 +36,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const session = await auth();
-  console.log(session?.user?.hasPhoneVerified);
   return (
     <ReactLenis root>
       <html lang="en">
@@ -70,8 +68,6 @@ export default async function RootLayout({
                 forcedTheme="dark"
               >
                 <main className="relative flex flex-col min-h-screen">
-                  <Navbar />
-
                   {session?.user?.hasPhoneVerified ? <></> : <PhoneChecker />}
                   <div className="flex-grow flex-1">{children}</div>
                 </main>

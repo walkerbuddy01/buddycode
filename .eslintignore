@@ -5,4 +5,5 @@ chart.tsx
 db.ts
 next-auth.d.ts
 placeholders-and-vanish-input.tsx
+RazorpayPaymentButton.tsx
 sw.js

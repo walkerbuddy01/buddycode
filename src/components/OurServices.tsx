@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Badge } from "./ui/badge";
-import { detailedServices } from "@/lib/constant";
+import { detailedServices } from "../lib/constant";
 import Link from "next/link";
 import SmoothScrolling from "./SmoothScrolling";
 
@@ -14,7 +14,7 @@ export default function OurServices() {
             <div className="rounded-xl pb-10 relative bg-card text-card-foreground  min-w-[350px] ">
               <Image
                 src="https://ik.imagekit.io/bc/Images/No%20thumbnail.png?updatedAt=1727198658945"
-                alt="intership"
+                alt="internship"
                 width={400}
                 height={400}
                 className="object-cover rounded-t-xl"

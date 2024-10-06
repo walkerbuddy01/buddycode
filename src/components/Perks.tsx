@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { perks } from "@/lib/constant";
-import { cn } from "@/lib/utils";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { perks } from "../lib/constant";
+import { cn } from "../lib/utils";
 
 function Perks() {
   return (

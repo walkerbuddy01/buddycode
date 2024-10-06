@@ -19,6 +19,11 @@ export const UserPhoneNumberSchema = z.object({
     ),
 });
 
+export const UserContactSchema = z.object({
+  name: z.string().min(3).max(50),
+  description: z.string().min(3).max(500),
+});
+
 export const UserEmailSchema = z.object({
   email: z.string().email(),
 });
@@ -26,3 +31,5 @@ export const UserEmailSchema = z.object({
 export const UserNameSchema = z.object({
   name: z.string().min(3).max(50),
 });
+
+ 

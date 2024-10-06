@@ -12,7 +12,6 @@ export default {
     github({
       clientId: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GIHUB_CLIENT_SECRET,
-      authorization: { params: { scope: "read:user user:email" } },
     }),
   ],
 } satisfies NextAuthConfig;

@@ -6,15 +6,15 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer";
-import { navItems } from "@/lib/constant";
+} from "./ui/drawer";
+import { navItems } from "../lib/constant";
 import { Gem, PanelTopClose, User } from "lucide-react";
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import ServiceDropDown from "./ServiceDropDown";
 import { Button } from "./ui/button";
-import { getCurrentUser } from "@/lib/getCurrentUser";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { getCurrentUser } from "../lib/getCurrentUser";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import SignOutButton from "./SignOutButton";
 
 export default async function Navbar() {
