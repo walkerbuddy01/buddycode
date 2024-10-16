@@ -16,21 +16,24 @@ import { Button } from "./ui/button";
 import { getCurrentUser } from "../lib/getCurrentUser";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import SignOutButton from "./SignOutButton";
+import Logo from "./Logo";
 
 export default async function Navbar() {
   const user = await getCurrentUser();
-  
+
   return (
     <div className=" backdrop-blur sticky z-50 inset-x-0 top-0 h-20">
       <header className="relative h-full">
         <MaxWidthWrapper>
           <div className="flex items-center h-20 ">
-            <Link href={"/"} className="sm:w-[50%] flex-1">
-              <h1 className="text-xl font-neuMachinaRegular text-white  ">
-                Buddy{" "}
-                <span className=" text-[#FF3B3F] font-helveticaNowDisplayMedium  text-shadow-red ">
-                  Code
-                </span>
+            <Link href={"/"} className="sm:w-[50%] flex items-center flex-1">
+              <Logo size="md" />
+              <h1 className="md:text-xl lg:text-2xl  sm:block hidden font-neuMachinaRegular text-white  ">
+                Buddy
+                <span className=" font-helveticaNowDisplayMedium  ">Code</span>
+                <sub className="ml-2 md:hidden lg:inline font-gilroyMedium text-xs">
+                  By Hiring Right
+                </sub>
               </h1>
             </Link>
             <div className="md:flex hidden justify-end w-[50%] gap-6 ">
@@ -74,7 +77,10 @@ export default async function Navbar() {
             >
               <Drawer>
                 <DrawerTrigger>
-                  <PanelTopClose className="h-7 w-7 mr-3" aria-label="Open navigation menu" />
+                  <PanelTopClose
+                    className="h-7 w-7 mr-3"
+                    aria-label="Open navigation menu"
+                  />
                 </DrawerTrigger>
                 <DrawerContent className="h-[520px] backdrop-blur bg-black/20">
                   <MaxWidthWrapper className="px-6 flex flex-col gap-8">

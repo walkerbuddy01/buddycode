@@ -80,6 +80,8 @@ export const techImagesLinks = {
   npm: "https://ik.imagekit.io/bc/TechImages/npm.png?updatedAt=1727111393899",
   mysql:
     "https://ik.imagekit.io/bc/TechImages/mysql.png?updatedAt=1727868957550",
+  contactUs:
+    "https://ik.imagekit.io/bc/Images/Service_Thumbnails%20/Contact_Us.png?updatedAt=1728971356278",
 };
 
 export const services = [
@@ -126,21 +128,10 @@ export const detailedServices = [
     href: "/services/bd",
     description:
       "Our backend development services offer comprehensive solutions for creating and managing backend. We'll work with you to create a custom backend that meets your specific needs.",
-    imageSrc: "/",
+    imageSrc:
+      "https://ik.imagekit.io/bc/Images/Service_Thumbnails%20/Backend_Service.png?updatedAt=1728841084075",
     imageAlt: "Backend Development",
-    Provides: [
-      "NodeJS",
-      "TypeScript",
-      "ExpressJS",
-      "Server Action",
-      "Prisma",
-      "Mongoose",
-      "MongoDB",
-      "MySQL",
-      "PostgreSQL",
-      "Firebase",
-      "Cloudflare Workers",
-    ],
+    Provides: ["NodeJS", "TypeScript", "ExpressJS"],
     minPrice: 14999,
     maxPrice: 39999,
     serviceId: "bd",
@@ -151,7 +142,8 @@ export const detailedServices = [
     href: "/services/wd",
     description:
       "We offer comprehensive web development services to help you build a strong online presence. Our team of experts will work with you to create a custom website that meets your specific needs.",
-    imageSrc: "/",
+    imageSrc:
+      "https://ik.imagekit.io/bc/Images/Service_Thumbnails%20/WebDevelopment_service.png?updatedAt=1728837934417",
     imageAlt: "Web Development",
     minPrice: 14999,
     maxPrice: 39999,
@@ -177,7 +169,8 @@ export const detailedServices = [
     href: "/services/ad",
     description:
       "Our app development services offer comprehensive solutions for creating and managing mobile apps. We'll work with you to create a custom app that meets your specific needs.",
-    imageSrc: "/",
+    imageSrc:
+      "https://ik.imagekit.io/bc/Images/Service_Thumbnails%20/AppDevelopment_service.png?updatedAt=1728839904251",
     imageAlt: "App Development",
     Provides: ["ReactNative", "Flutter", "FlutterFlow"],
     minPrice: 19999,
@@ -189,7 +182,8 @@ export const detailedServices = [
     href: "/services/cw",
     description:
       "Our content writing services offer comprehensive solutions for creating and managing content. We'll work with you to create a custom content that meets your specific needs.",
-    imageSrc: "/",
+    imageSrc:
+      "https://ik.imagekit.io/bc/Images/Service_Thumbnails%20/ContentWriting_service.png?updatedAt=1728925695580",
     imageAlt: "Content Writing",
     Provides: [
       "Copy Writing",
@@ -206,9 +200,10 @@ export const detailedServices = [
     href: "/services/gd",
     description:
       "Our graphic design services offer comprehensive solutions for creating and managing graphics. We'll work with you to create a custom graphic that meets your specific needs.",
-    imageSrc: "/",
+    imageSrc:
+      "https://ik.imagekit.io/bc/Images/Service_Thumbnails%20/GraphicDesigning_service.png?updatedAt=1728968749770",
     imageAlt: "Graphic Designing",
-    Provides: ["UI/UX", "Logo-Designing", "Branding", "Illustration"],
+    Provides: ["UI/UX", "Logo-Designing", "Branding", "Thumbnail Designing"],
     minPrice: 999,
     maxPrice: 19999,
     serviceId: "gd",

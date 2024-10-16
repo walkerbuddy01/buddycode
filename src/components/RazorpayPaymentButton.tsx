@@ -7,7 +7,7 @@ import Script from "next/script";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
-import { CircleCheck, CircleX, Link } from "lucide-react";
+import { CircleCheck, CircleX, Link, Loader2 } from "lucide-react";
 import confetti from "canvas-confetti";
 
 declare global {
@@ -131,7 +131,7 @@ export default function RazorpayPaymentButton({
               onClick={handlePayment}
               className=" w-full sm:w-auto text-lg font-helveticaNowDisplayBold py-6"
             >
-              {processing ? "Processing" : `Pay Now-${amount}`}
+              {processing ?  <Loader2 className="h-6 w-6 animate-spin" /> : `Pay Now-${amount}`}
             </Button>
           </>
         ) : paymentSuccess === false ? (

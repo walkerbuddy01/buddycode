@@ -1,4 +1,3 @@
-
 import InternshipPrograms from "../../components/InternshipPrograms";
 import MaxWidthWrapper from "../../components/MaxWidthWrapper";
 import NavFooter from "../../components/NavFooter";
@@ -39,10 +38,8 @@ export default function InternshipProgramPage() {
         <section>
           <InternshipPrograms />
         </section>
-        <section>
-          <NavFooter />
-        </section>
       </MaxWidthWrapper>
+      <NavFooter />
     </section>
   );
 }

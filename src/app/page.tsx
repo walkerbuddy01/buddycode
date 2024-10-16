@@ -95,8 +95,8 @@ export default function Home() {
             <InternshipPrograms />
           </MaxWidthWrapper>
         </section>
-        <NavFooter />
       </MaxWidthWrapper>
+      <NavFooter />
     </section>
   );
 }

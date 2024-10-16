@@ -214,7 +214,7 @@ export const sendEmailVerificationToken = async (
                                                                             style="outline:none" tabindex="-1"
                                                                             target="_blank"><img alt="Logo"
                                                                                 height="auto"
-                                                                                src="https://ik.imagekit.io/bc/Images/companyLogo.png?updatedAt=1728147139140"
+                                                                                src="https://ik.imagekit.io/bc/Images/companyLogo.svg?updatedAt=1728706903972"
                                                                                 style="display: block; height: auto; border: 0; width: 100%;"
                                                                                 title="Logo" width="650" /></a></div>
                                                                 </div>

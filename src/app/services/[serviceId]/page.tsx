@@ -58,7 +58,11 @@ export default async function ServicePage({
               </div>
               <div className=" rounded-xl flex justify-end bg-zinc-900 ">
                 <Image
-                  src="https://ik.imagekit.io/bc/Images/NO-THUMBNAIL.png?updatedAt=1727889094252"
+                  src={
+                    service?.imageSrc !== "/"
+                      ? (service?.imageSrc as string)
+                      : "https://ik.imagekit.io/bc/Images/NO-THUMBNAIL.png?updatedAt=1727889094252"
+                  }
                   alt="Intership Program"
                   layout="reponsive"
                   width={600}
@@ -80,8 +84,7 @@ export default async function ServicePage({
             Connect and Lets Change Your Idea Into Reality
           </p>
           <div>
-            
-            <ContactSection />
+            <ContactSection serviceName={service?.name as string} />
           </div>
         </MaxWidthWrapper>
       </section>
@@ -89,6 +92,3 @@ export default async function ServicePage({
     </section>
   );
 }
-
-
-

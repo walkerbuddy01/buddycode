@@ -62,6 +62,9 @@ body::-webkit-scrollbar {
 
 
 
+
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -252,3 +255,4 @@ body::-webkit-scrollbar {
     transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
   }
 }
+

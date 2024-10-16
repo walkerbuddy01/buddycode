@@ -28,7 +28,7 @@ export default async function ProgramDetail() {
   );
 
   const boughtProgram = await checkBoughtUserInternShipProgram("cf");
-  const alreadyBought = boughtProgram ? true : false; 
+  const alreadyBought = boughtProgram ? true : false;
   return (
     <section className="main-bg">
       <Navbar />
@@ -64,8 +64,10 @@ export default async function ProgramDetail() {
                     <div className="py-4">
                       <CheckOutButton
                         href={"/checkout/cf"}
-                        alreadyBought = {alreadyBought}
-                        receiptId={alreadyBought ? boughtProgram?.recieptId : undefined}
+                        alreadyBought={alreadyBought}
+                        receiptId={
+                          alreadyBought ? boughtProgram?.recieptId : undefined
+                        }
                       />
                     </div>
                     <p className="lg:text-lg text-sm font-helveticaNowDisplayRegular">
@@ -249,12 +251,8 @@ export default async function ProgramDetail() {
             </div>
           </MaxWidthWrapper>
         </section>
-        <section>
-          <MaxWidthWrapper>
-            <NavFooter />
-          </MaxWidthWrapper>
-        </section>
       </section>
+      <NavFooter />
     </section>
   );
 }

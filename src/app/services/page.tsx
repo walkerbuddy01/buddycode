@@ -16,8 +16,8 @@ export default function AllServices() {
           <OurServices />
         </div>
 
-        <NavFooter />
       </MaxWidthWrapper>
+        <NavFooter />
     </section>
   );
 }

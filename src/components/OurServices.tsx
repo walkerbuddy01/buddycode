@@ -13,7 +13,11 @@ export default function OurServices() {
           <Link href={service.href} key={service.name}>
             <div className="rounded-xl pb-10 relative bg-card text-card-foreground  min-w-[350px] ">
               <Image
-                src="https://ik.imagekit.io/bc/Images/No%20thumbnail.png?updatedAt=1727198658945"
+                src={
+                  service?.imageSrc !== "/"
+                    ? (service?.imageSrc as string)
+                    : "https://ik.imagekit.io/bc/Images/NO-THUMBNAIL.png?updatedAt=1727889094252"
+                }
                 alt="internship"
                 width={400}
                 height={400}
