@@ -12,7 +12,7 @@ function NavFooter() {
             <div className="h-full grid sm:grid-cols-3 sm:grid-rows-1 grid-rows-3 grid-cols-1  justify-center gap-5">
               <div className="sm:col-span-1  row-span-1 place-content-center h-full">
                 <div>
-                  <Logo size="md" />
+                  <Logo size="sm" />
                 </div>
                 <p className="font-helveticaNowDisplayMedium text-lg py-2">
                   let&apos;s connect with our socials

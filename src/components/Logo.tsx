@@ -12,15 +12,16 @@ export default function Logo({
   const dimension =
     size === "sm" ? 50 : size === "md" ? 70 : size === "lg" ? 90 : 120;
   return (
-    <div>
+    <div className="mr-2">
       <Image
         src={
-          "https://ik.imagekit.io/bc/Images/companyLogo.png?updatedAt=1728707389731"
+          "https://ik.imagekit.io/bc/Images/company_logo.png?updatedAt=1729839670836"
         }
         alt="Logo"
         width={dimension}
         height={dimension}
         className={className}
+        layout="intrinsic"
       />
     </div>
   );

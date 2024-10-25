@@ -9,17 +9,17 @@ function ProgramsBenefits({
   data: string[];
 }) {
   return (
-    <div className="flex gap-4 flex-wrap">
+    <div className="flex gap-4 flex-wrap mt-10">
       {data.map((item, index) => (
-        <p
+        <h1
           className={cn(
-            "sm:text-6xl text-5xl font-bold bg-clip-text text-transparent text-img ",
+            "text-2xl sm:text-4xl font-helveticaNowDisplayBold bg-[#252525] px-8 sm:px-9 sm:py-4 py-2 rounded-full",
             className
           )}
           key={index}
         >
-          {item} {index === data.length - 1 ? "" : "+"}
-        </p>
+          {item}
+        </h1>
       ))}
     </div>
   );

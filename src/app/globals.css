@@ -30,7 +30,15 @@ body {
 }
 
 .bd-bg {
-  background-image: url('https://ik.imagekit.io/bc/Images/bg-2.png?updatedAt=1727870345699');
+  background-image: url('https://ik.imagekit.io/bc/Images/service_bg.png?updatedAt=1729866368639');
+  background-size: cover;
+  background-position: top;
+  margin: 0;
+  padding: 0;
+}
+
+.auth-bg {
+  background-image: url('https://ik.imagekit.io/bc/Images/Authentication_bg.png?updatedAt=1729866933509');
   background-size: cover;
   background-position: top;
   margin: 0;
@@ -255,4 +263,3 @@ body::-webkit-scrollbar {
     transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
   }
 }
-

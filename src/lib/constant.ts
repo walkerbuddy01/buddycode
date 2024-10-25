@@ -131,7 +131,7 @@ export const detailedServices = [
     imageSrc:
       "https://ik.imagekit.io/bc/Images/Service_Thumbnails%20/Backend_Service.png?updatedAt=1728841084075",
     imageAlt: "Backend Development",
-    Provides: ["NodeJS", "TypeScript", "ExpressJS"],
+    Provides: ["NodeJS", "TypeScript", "ExpressJS", "Server Actions", "NextJS"],
     minPrice: 14999,
     maxPrice: 39999,
     serviceId: "bd",
@@ -214,7 +214,8 @@ export const detailedServices = [
     description:
       "Our wordpress development services offer comprehensive solutions for creating and managing wordpress. We'll work with you to create a custom wordpress that meets your specific needs.",
     Provides: ["E-Commerce", "Wordpress Theme", "Wordpress Plugin"],
-    imageSrc: "/",
+    imageSrc:
+      "https://ik.imagekit.io/bc/Images/Service_Thumbnails%20/wordpress_service.png?updatedAt=1729680436036",
     imageAlt: "Wordpress web development",
     minPrice: 5999,
     maxPrice: 39999,
@@ -305,8 +306,8 @@ export const navFooterItems = [
 
 export const contactDetails = [
   "buddycodeoffical@gmail.com",
-  "+91-XXXXX-XXXXX",
-  "+91-XXXXX-XXXXX",
+  "+91-8930667637",
+  "+91-9646848911",
 ];
 
 enum courseLevels {
@@ -354,7 +355,13 @@ export const internshipDetails: Internship[] = [
       );
     },
     tags: ["Web Development", "Frontend", "ReactJS", "GSAP", "Lenis"],
-    benefits: ["3-Months", "Bounties", "EMI", "Job Assistants*"],
+    benefits: [
+      "3-Months ⚡",
+      "Bounties 💰",
+      "EMI 👻",
+      "Placement Assistants*🗿",
+      "Self-Development 🧠",
+    ],
     imageSrc: "https://ik.imagekit.io/bc/Images/cf.jpg?updatedAt=1727111262213",
     imageAlt: "Conquer-Frontend",
     courseLevel: courseLevels["Beginner"],
@@ -376,7 +383,7 @@ export const internshipDetails: Internship[] = [
       );
     },
     tags: ["Mongoose", "MongoDB", "NoSQL", "Backend", "NodeJS"],
-    benefits: ["3-Months", "Bounties", "EMI", "Job Assistants*"],
+    benefits: ["3-Months", "Bounties", "EMI", "Placement Assistants*"],
     imageSrc:
       "https://ik.imagekit.io/bc/Images/Frame%203%20(1).jpg?updatedAt=1727167210312",
     imageAlt: "Conquer-Backend",
@@ -464,5 +471,13 @@ export const cfSyllabus = [
   {
     label: "Mega Project ",
     topics: ["Lets Build from Scratch"],
+  },
+  {
+    label: "Additional Things",
+    topics: [
+      "AI Tools (Chatgpt,Ideogram,Cursor)",
+      "Resume Building",
+      "Mock Interviews",
+    ],
   },
 ];

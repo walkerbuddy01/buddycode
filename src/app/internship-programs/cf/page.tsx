@@ -36,7 +36,7 @@ export default async function ProgramDetail() {
         <section className="w-full">
           <MaxWidthWrapper className=" w-full  ">
             <div className="flex w-full sm:px-0 px-1  select-none">
-              <div className="flex md:flex-row flex-col-reverse items-center  gap-16 md:items-start">
+              <div className="flex md:flex-row flex-col-reverse items-center  sm:gap-16 gap-8 md:items-start">
                 <p className="md:w-1/2">
                   <p className="lg:space-y-5 space-y-5 px-2">
                     <h1 className="lg:text-5xl md:text-4xl text-3xl md:tracking-tight font-helveticaNowDisplayBold">
@@ -87,12 +87,15 @@ export default async function ProgramDetail() {
                   />
                 </div>
               </div>
-              <div></div>
             </div>
           </MaxWidthWrapper>
         </section>
         <section>
           <MaxWidthWrapper>
+            <div className=" text-7xl sm:text-9xl font-helveticaNowDisplayExtraBold">
+              <p>Develop,</p>
+              the <span className="text-[#ff7700]">Future</span>
+            </div>
             <ProgramsBenefits data={internshipDetail[0].benefits} />
           </MaxWidthWrapper>
         </section>

@@ -1,3 +1,13 @@
+import { PanelTopClose, User } from "lucide-react";
+import Link from "next/link";
+import { navItems } from "../lib/constant";
+import { getCurrentUser } from "../lib/getCurrentUser";
+import Logo from "./Logo";
+import MaxWidthWrapper from "./MaxWidthWrapper";
+import ServiceDropDown from "./ServiceDropDown";
+import SignOutButton from "./SignOutButton";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Button } from "./ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -7,16 +17,6 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "./ui/drawer";
-import { navItems } from "../lib/constant";
-import { Gem, PanelTopClose, User } from "lucide-react";
-import Link from "next/link";
-import MaxWidthWrapper from "./MaxWidthWrapper";
-import ServiceDropDown from "./ServiceDropDown";
-import { Button } from "./ui/button";
-import { getCurrentUser } from "../lib/getCurrentUser";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import SignOutButton from "./SignOutButton";
-import Logo from "./Logo";
 
 export default async function Navbar() {
   const user = await getCurrentUser();
@@ -27,7 +27,7 @@ export default async function Navbar() {
         <MaxWidthWrapper>
           <div className="flex items-center h-20 ">
             <Link href={"/"} className="sm:w-[50%] flex items-center flex-1">
-              <Logo size="md" />
+              <Logo size="sm" />
               <h1 className="md:text-xl lg:text-2xl  sm:block hidden font-neuMachinaRegular text-white  ">
                 Buddy
                 <span className=" font-helveticaNowDisplayMedium  ">Code</span>
@@ -69,7 +69,6 @@ export default async function Navbar() {
                   <Button>Sign up</Button>
                 </Link>
               )}
-              {/* TODO:// Add the sign up functionality with proper updation */}
             </div>
             <div
               className="h-full flex md:hidden items-center gap-3"
@@ -115,26 +114,8 @@ export default async function Navbar() {
                       <p className="text-sm text-zinc-300 font-neuMachinaRegular">
                         Upcoming features
                       </p>
-                      <div className="space-y-1 ">
-                        {/* {UPCOMING_FEATURES.map((item) => (
-                          <p
-                            key={item.title}
-                            className="flex gap-3 items-center text-zinc-400 tracking-wide"
-                          >
-                            <item.icon className="h-4 w-4 text-zinc-500" />
-                            {item.title}
-                          </p>
-                        ))} */}
-                      </div>
                     </div>
-                    <Button
-                      className="w-full flex  items-center gap-2"
-                      variant={"outline"}
-                      disabled
-                    >
-                      Upgrade to Premium soon:{")"}
-                      <Gem className="h-4 w-4" />
-                    </Button>
+
                     {user ? (
                       <div className="flex items-center gap-3">
                         <Avatar>
@@ -150,7 +131,9 @@ export default async function Navbar() {
                       </div>
                     ) : (
                       <Link href={"/auth"}>
-                        <Button>Sign up</Button>
+                        <DrawerClose>
+                          <Button>Sign up</Button>
+                        </DrawerClose>
                       </Link>
                     )}
                   </MaxWidthWrapper>
